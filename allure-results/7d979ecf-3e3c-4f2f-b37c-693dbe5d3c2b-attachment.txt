@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@data-stid=\"link-header-account-signin\"]/preceding-sibling::a\"}\n  (Session info: chrome=120.0.6099.71)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF60DE74D02+56194]\n\t(No symbol) [0x00007FF60DDE04B2]\n\t(No symbol) [0x00007FF60DC876AA]\n\t(No symbol) [0x00007FF60DCD16D0]\n\t(No symbol) [0x00007FF60DCD17EC]\n\t(No symbol) [0x00007FF60DD14D77]\n\t(No symbol) [0x00007FF60DCF5EBF]\n\t(No symbol) [0x00007FF60DD12786]\n\t(No symbol) [0x00007FF60DCF5C23]\n\t(No symbol) [0x00007FF60DCC4A45]\n\t(No symbol) [0x00007FF60DCC5AD4]\n\tGetHandleVerifier [0x00007FF60E1ED5BB+3695675]\n\tGetHandleVerifier [0x00007FF60E246197+4059159]\n\tGetHandleVerifier [0x00007FF60E23DF63+4025827]\n\tGetHandleVerifier [0x00007FF60DF0F029+687785]\n\t(No symbol) [0x00007FF60DDEB508]\n\t(No symbol) [0x00007FF60DDE7564]\n\t(No symbol) [0x00007FF60DDE76E9]\n\t(No symbol) [0x00007FF60DDD8094]\n\tBaseThreadInitThunk [0x00007FFB7A857344+20]\n\tRtlUserThreadStart [0x00007FFB7AF026B1+33]\n"
+}

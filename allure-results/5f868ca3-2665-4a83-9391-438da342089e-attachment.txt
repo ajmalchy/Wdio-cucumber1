@@ -1,0 +1,6 @@
+{
+  "script": "return (async clickSigninButtonLocator(){\r\n        await $(this.clickSigninButtonLocator).click();\r\n    }).apply(null, arguments)",
+  "args": [
+    null
+  ]
+}
