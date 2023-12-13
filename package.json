@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^8.23.3",
+    "chai": "^4.3.10",
     "chromedriver": "^119.0.1"
   },
   "devDependencies": {

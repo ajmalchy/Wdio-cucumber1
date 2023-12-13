@@ -1,6 +1,7 @@
 const { Given, When, Then } = require("@wdio/cucumber-framework");
 const homePage = require("../Pages/homePage");
 const signinPage = require("../Pages/signinPage");
+const { expect } = require("chai");
 
 
 Given(/^User launches the Hotels website$/, async () => {
@@ -25,4 +26,26 @@ When(/^User clicks on the Continue button$/, async () => {
 
 Then(/^User verifies that the error message "([^"]*)" is displayed$/, async (errorMessage) => {
     await signinPage.invalidEmailErrorIsDisplayed();
+});
+
+
+When(/^User clicks on the Travelers button$/, async () => {
+    await homePage.clickTravelersButton();
+})
+
+When(/^User selects Children as (\d+)$/, async (childrenCount) => {
+    // Code to select the specified number of children
+    for (let i = 0; i < childrenCount; i++) {
+        await homePage.clickChildrenBtnPlus()
+    }
+});
+
+Then(/^User verifies that Children-age dropdowns are (\d+)$/, async (expectedDropdownCount) => {
+    const actualDropdownCount = await homePage.getVisibleChildrenDropdownCount();
+    expect(actualDropdownCount).to.equal(expectedDropdownCount);
+});
+
+Then(/^User verifies that the "(Plus|Minus)" button is enabled$/, async (buttonType) => {
+    const isButtonEnabled = await homePage.isButtonEnabled(buttonType);
+    expect(isButtonEnabled).to.be.true;
 });
