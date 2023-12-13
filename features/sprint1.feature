@@ -16,20 +16,21 @@ Feature: Sprint-1
     When User clicks on the Travelers button
     And User selects Children as 2
     Then User verifies that Children-age dropdowns are 2
-    And User verifies that the "Plus" button is enabled
-    And User verifies that the "Minus" button is enabled
+    And User verifies that the "Plus" button is "enabled"
+    And User verifies that the "Minus" button is "enabled"
 
-    # When User selects "Children" as 6
-    # Then User verifies that Children-age dropdowns are 6
-    # And User verifies that the Plus button is disabled
-    # And User verifies that the Minus button is enabled
+    When User selects Children as 6
+    Then User verifies that Children-age dropdowns are 6
+    And User verifies that the "Plus" button is "disabled"
+    And User verifies that the "Minus" button is "enabled"
 
-    # When User selects "Children" as 5
-    # Then User verifies that Children-age dropdowns are 5
-    # And User verifies that the Plus button is enabled
-    # And User verifies that the Minus button is enabled
+    When User selects Children as 5
+    Then User verifies that Children-age dropdowns are 5
+    And User verifies that the "Plus" button is "enabled"
+    And User verifies that the "Minus" button is "enabled"
 
-    # When User selects "Children" as 0
-    # Then User verifies that Children-age dropdowns are NOT displayed
-    # And User verifies that the Plus button is enabled
-    # And User verifies that the Minus button is disabled
+    When User selects Children as 0
+    # problem below 1 line
+    Then User verifies that Children-age dropdowns are NOT displayed
+    And User verifies that the "Plus" button is "enabled"
+    And User verifies that the "Minus" button is "disabled"
