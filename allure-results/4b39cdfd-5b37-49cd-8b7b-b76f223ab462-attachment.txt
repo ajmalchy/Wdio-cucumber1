@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[@data-stid=\"open-room-picker\"]\"}\n  (Session info: chrome=120.0.6099.71)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF69E9D4D02+56194]\n\t(No symbol) [0x00007FF69E9404B2]\n\t(No symbol) [0x00007FF69E7E76AA]\n\t(No symbol) [0x00007FF69E8316D0]\n\t(No symbol) [0x00007FF69E8317EC]\n\t(No symbol) [0x00007FF69E874D77]\n\t(No symbol) [0x00007FF69E855EBF]\n\t(No symbol) [0x00007FF69E872786]\n\t(No symbol) [0x00007FF69E855C23]\n\t(No symbol) [0x00007FF69E824A45]\n\t(No symbol) [0x00007FF69E825AD4]\n\tGetHandleVerifier [0x00007FF69ED4D5BB+3695675]\n\tGetHandleVerifier [0x00007FF69EDA6197+4059159]\n\tGetHandleVerifier [0x00007FF69ED9DF63+4025827]\n\tGetHandleVerifier [0x00007FF69EA6F029+687785]\n\t(No symbol) [0x00007FF69E94B508]\n\t(No symbol) [0x00007FF69E947564]\n\t(No symbol) [0x00007FF69E9476E9]\n\t(No symbol) [0x00007FF69E938094]\n\tBaseThreadInitThunk [0x00007FFAEC467344+20]\n\tRtlUserThreadStart [0x00007FFAEC7026B1+33]\n"
+}
