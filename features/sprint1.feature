@@ -34,3 +34,16 @@ Feature: Sprint-1
     Then User verifies that Children-age dropdowns are NOT displayed
     And User verifies that the "Plus" button is "enabled"
     And User verifies that the "Minus" button is "disabled"
+
+    @TC-31
+    Scenario Outline: Verify language can be changed successfully
+
+    
+    When User clicks on the English language
+    And User selects "Español (Estados Unidos)" in the language dropdown
+    And User clicks on the "Save" button
+    Then User verifies that the selected language "Español" is displayed on the Homepage
+    When User clicks on the Español language
+    And User selects "English (United States)" in the language dropdown
+    And User clicks on the "Guardar" button
+    Then User verifies that the selected language "English" is displayed on the Homepage

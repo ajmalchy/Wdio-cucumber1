@@ -1,3 +1,5 @@
+const { expect } = require("chai");
+
 class Homepage {
     // locators of elements on Homepage
     signinLinkLocator = '//button[text()="Sign in"]';
@@ -7,6 +9,18 @@ class Homepage {
     childrenBtnMinusLocator = '//input[@id="traveler_selector_children_step_input-0"]/preceding-sibling::button';
     allChildDropdownLocators = '//select[@class="uitk-field-select"]';
     childrenNumberLocator = '//input[@id="traveler_selector_children_step_input-0"]';
+
+    languageBtnLocator = '//button[@data-stid="button-type-picker-trigger"]';
+
+    languageDropdownLocator = '//select[@id="language-selector"]';
+
+    optionEnglishLocator = '//select[@id="language-selector"]//option[text()="English (United States)"]'
+    optionEspanolLocator = '//select[@id="language-selector"]//option[text()="Español (Estados Unidos)"]';
+
+    saveEnglishLocator = '//button[text()="Save"]';
+    saveGuardarLocator = '//button[text()="Guardar"]';
+    homeEspanolLocator = '//button[text()="Español"]';
+    homeEnglishLocator = '//button[text()="English"]';
     // functions to interact with the elements on homepage
     async clickSigninLinkLocator() {
         await $(this.signinLinkLocator).waitForClickable();
@@ -79,8 +93,52 @@ class Homepage {
         return await buttonElement.isEnabled();
 
     }
+    async clickLanguageBtn() {
+        
+        await $(this.languageBtnLocator).click();
+        await browser.pause(2000);
+    }
 
+    async clickLanguageDropdown() {
+        await $(this.languageDropdownLocator).waitForClickable;
+        await $(this.languageDropdownLocator).click();
+        await browser.pause(2000);
+    }
+    async selectLanguage(language) {
+      if(language == 'Español (Estados Unidos)'){
+        await $(this.optionEspanolLocator).click()
+      } else if (language == 'English (United States)') {
+        await $(this.optionEnglishLocator).click();
+      }
+      else return;
+    }
 
+    async clickSaveLanguage(saveLanguage) {
+        if(saveLanguage == 'Save'){
+        await $(this.saveEnglishLocator).click();
+        } else if (saveLanguage == 'Guardar') {
+            await $(this.saveGuardarLocator).click();
+            await browser.pause(2000);
+        }
+        else return;
+        
+    }
+    async isLanguageDisplayed(language) {
+        if(language == "Español") {
+            const displayedLanguage = await $(this.homeEspanolLocator).getText();
+            console.log('displayedLanguage', displayedLanguage);
+            return displayedLanguage === language;
+        } else if (language == "English") {
+            const displayedLanguage = await $(this.homeEnglishLocator).getText();
+            console.log('displayedLanguage', displayedLanguage);
+            return displayedLanguage === language;
+        }
+        else return;
+
+        
+        
+        // expect(displayedLanguage).to.equal(language);
+    }
 }
 
 module.exports = new Homepage;

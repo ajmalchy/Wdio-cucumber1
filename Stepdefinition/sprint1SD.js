@@ -135,3 +135,29 @@ Then(/^User verifies that the "(Plus|Minus)" button is "(enabled|disabled)"$/, a
         }
 
 });
+
+When(/^User clicks on the English language$/, async() => {
+    await homePage.clickLanguageBtn();
+})
+
+When(/^User selects "([^"]*)" in the language dropdown$/, async(language) => {
+    await homePage.clickLanguageDropdown();
+    await homePage.selectLanguage(language);
+})
+
+When(/^User clicks on the "([^"]*)" button$/, async(saveLanguage) => {
+    await browser.pause(5000);
+    await homePage.clickSaveLanguage(saveLanguage);
+    
+})
+
+Then(/^User verifies that the selected language "([^"]*)" is displayed on the Homepage$/, async (language) => {
+    await browser.pause(5000);
+    const isLanguageDisplayed = await homePage.isLanguageDisplayed(language);
+    expect(isLanguageDisplayed).to.be.true;
+
+});
+
+When(/^User clicks on the Español language$/, async() => {
+    await homePage.clickLanguageBtn();
+})
