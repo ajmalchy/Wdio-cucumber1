@@ -161,3 +161,5 @@ Then(/^User verifies that the selected language "([^"]*)" is displayed on the Ho
 When(/^User clicks on the Español language$/, async() => {
     await homePage.clickLanguageBtn();
 })
+
+
