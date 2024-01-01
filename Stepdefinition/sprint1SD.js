@@ -2,6 +2,7 @@ const { Given, When, Then } = require("@wdio/cucumber-framework");
 const homePage = require("../Pages/homePage");
 const signinPage = require("../Pages/signinPage");
 const { expect } = require("chai");
+const listYourPropertyPage = require("../Pages/listYourPropertyPage");
 
 
 Given(/^User launches the Hotels website$/, async () => {
@@ -162,4 +163,23 @@ When(/^User clicks on the Español language$/, async() => {
     await homePage.clickLanguageBtn();
 })
 
+When(/^User clicks on List your property$/, async() => {
+    await homePage.clickListYourProperty();
+})
+
+Then(/^User verifies What would you like to list? is displayed$/, async() => {
+    const allHandles = await browser.getWindowHandles();
+
+    for (const handle of allHandles) {
+        await browser.switchToHandle(handle);
+
+        if(await browser.getTitle().localeCompare('List Your Property With Expedia Group and Reach Global Travelers.') === 0) {
+            break;
+        }
+        await browser.pause(10000);
+
+    }
+    const isListDisplayed = await listYourPropertyPage.isWhatWouldYouLikeToListDisplayed();
+    expect(isListDisplayed).to.be.true()
+})
 

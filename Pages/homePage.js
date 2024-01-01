@@ -136,11 +136,12 @@ class Homepage {
             return displayedLanguage === language;
         }
         else return;
-
-
-
         // expect(displayedLanguage).to.equal(language);
     }
+    async clickListYourProperty() {
+        await $(this.listYourPropertyLocator).click();
+    }
+
 }
 
 module.exports = new Homepage;

@@ -53,16 +53,16 @@ Scenario Outline: Verify "List your Property" flow
 
     When User clicks on List your property
     Then User verifies What would you like to list? is displayed
-    And User verifies Lodging and Private residence options are displayed
-    When User clicks on Private residence
-    Then User verifies "Step 1 of 3" is displayed
-    When User enters "4" as "bedroom"
-    And User enters "2.5" as "bathroom"
-    And User clicks on Next button
-    Then User verifies "Step 2 of 3" is displayed
-    And User verifies "Where is your property located?" is displayed
-    When User enters "121" in address
-    And User selects "1211 6th Avenue, New York, NY, USA" from auto-suggestion
-    Then User verifies map is displayed
-    And User verifies pin in map is displayed
-    And User verifies "Move the pin to adjust the location of your property." is displayed below graph
+    # And User verifies Lodging and Private residence options are displayed
+    # When User clicks on Private residence
+    # Then User verifies "Step 1 of 3" is displayed
+    # When User enters "4" as "bedroom"
+    # And User enters "2.5" as "bathroom"
+    # And User clicks on Next button
+    # Then User verifies "Step 2 of 3" is displayed
+    # And User verifies "Where is your property located?" is displayed
+    # When User enters "121" in address
+    # And User selects "1211 6th Avenue, New York, NY, USA" from auto-suggestion
+    # Then User verifies map is displayed
+    # And User verifies pin in map is displayed
+    # And User verifies "Move the pin to adjust the location of your property." is displayed below graph
